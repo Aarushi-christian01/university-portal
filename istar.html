@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        header{
+            border:2px ;
+            background-color: rgb(190, 225, 226);
+            display: flex;
+        }
+        .logo{
+            background-image: url(istar.png);
+            height: 150px;
+            width: 250px;
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+        .uni{
+            display: flex;
+            margin-left: 200px;
+            font-style: initial;
+            font-size: 35px;
+            margin: auto;
+
+        }
+        .navbar{
+            
+        display:flex;
+        background-color: #333;
+        padding: 10px;
+        text-align: center;
+        justify-content: center;
+        
+        }
+
+        .nav-item {
+        color: white;
+        padding: 15px 90px;
+        margin-right: 10px;
+        cursor: default;
+        text-align: center;
+        }
+
+.nav-item:hover {
+  background-color: #555;
+}
+        
+        .leftframe{
+            float:left;
+            height:500px;
+            width: 280px;
+            border: 2px ;
+            background-color: cadetblue;
+            border: 1px solid black;
+            font-size: 20px ;
+
+        }
+        .leftframe a {
+        display: block;
+        margin: 12px 0;
+        color: #002855;
+        text-decoration: none;
+        font-weight: bold;
+        cursor: pointer;
+    }
+    .leftframe a:hover {
+        text-decoration: underline;
+    }
+        .rightframe{
+            float:right;
+            height:500px;
+            width: 1277px;
+            background-color: rgb(234, 243, 248);
+            border: 1px solid black;
+            font-size: 18px ;
+        }
+        iframe{
+            margin: 50px;
+            border: none;
+        }
+    </style>
+    <title>University site</title>
+</head>
+<body>
+    <header ><div class="logo"></div>
+        <div class="uni"> Institute of Science & Technology for Advanced Studies & Research (ISTAR)</div></header>
+        
+    <div class="navbar">
+  <a href="homepage.html" class="nav-item">HOME</a>
+  <a href="semcom.html" class="nav-item">SEMCOM</a>
+  <a href="adit.html" class="nav-item">ADIT</a>
+  <a href="mbit.html" class="nav-item">MBIT</a>
+</div>
+
+    <div class="leftframe">
+        
+        <a href="cs.html" target="iframe1">Computer Science Department</a>
+            <a href="oc.html" target="iframe1">Organic Chemistry</a>
+            <a href="ic.html" target="iframe1">Industrial chemistry</a>
+            <a href="mihs.html" target="iframe1">MIHS</a>
+        
+    </div>
+    <div class="rightframe"><iframe name="iframe1" src="istar_welcome.html" height="500px" width="1150px"></iframe>
+    
+    </div>
+</body>
+</html>

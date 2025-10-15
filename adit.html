@@ -1,0 +1,200 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      background-color: rgb(190, 225, 226);
+      padding: 0.5%;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      background-image: url(adit.png);
+      width: 13%;
+      height: 17vh;
+      background-size: contain;
+      background-repeat: no-repeat;
+      flex-shrink: 0;
+    }
+
+    .uni {
+      flex: 1;
+      text-align: center;
+      font-size: 2rem;
+      margin: 0 2%;
+    }
+
+    .navbar {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      background-color: #333;
+      
+    }
+
+    .nav-item {
+      color: white;
+       padding: 1%  1%; 
+      margin: 0.5%;
+      text-decoration: none;
+      text-align: center;
+      font-size: 1rem;
+    }
+
+    .nav-item:hover {
+      background-color: #555;
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      width: 100%;
+    }
+
+    .leftframe {
+      width: 200px;
+      background-color: cadetblue;
+      border: 0.2rem  rgb(255, 255, 255);
+      font-size: 1rem;
+      color: #002855;
+      padding: 1%;
+    }
+    .leftframe a {
+        display: block;
+        margin: 12px 0;
+        color: #002855;
+        text-decoration: none;
+        font-weight: bold;
+        cursor: pointer;
+    }
+    .leftframe a:hover {
+        text-decoration: underline;
+    }
+
+    .rightframe {
+      flex: 3 1 70%;
+      background-color: rgb(234, 243, 248);
+      border: 0.2rem  rgb(255, 255, 255);
+      padding: 1%;
+    }
+
+    iframe {
+      width: 100%;
+      height: 70vh;
+      border: none;
+    }
+
+    /* 📱 Media Queries for Adaptive Layout */
+    @media (max-width: 1024px) {
+      .uni {
+        font-size: 1.5rem;
+      }
+
+      .nav-item {
+        font-size: 0.9rem;
+        padding: 2% 3%;
+      }
+
+      .leftframe {
+        font-size: 0.95rem;
+        text-decoration: none;
+      }
+    }
+
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .logo {
+        width: 40%;
+        height: 12vh;
+      }
+
+      .uni {
+        font-size: 1.3rem;
+        margin-top: 1%;
+      }
+
+      .nav-item {
+        font-size: 0.85rem;
+        padding: 3% 5%;
+        
+      }
+
+      .container {
+        flex-direction: column;
+      }
+
+      .leftframe, .rightframe {
+        flex: 1 1 100%;
+        font-size: 1rem;
+        text-decoration: none;
+      }
+
+      iframe {
+        height: 60vh;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .nav-item {
+        font-size: 0.8rem;
+        padding: 4% 6%;
+      }
+
+      .uni {
+        font-size: 1.1rem;
+      }
+
+      iframe {
+        height: 50vh;
+      }
+    }
+  </style>
+  <title>University Site</title>
+</head>
+<body>
+  <header>
+    <div class="logo"></div>
+    <div class="uni">A. D. Patel Institute of Technologys</div>
+  </header>
+
+  <div class="navbar">
+    <a href="homepage.html" class="nav-item">HOME</a>
+    <a href="istar.html" class="nav-item">ISTAR</a>
+    <a href="semcom.html" class="nav-item">SEMCOM</a>
+    <a href="adit.html" class="nav-item">ADIT</a>
+    <a href="mbit.html" class="nav-item">MBIT</a>
+  </div>
+
+  <div class="container">
+    
+    <div class="leftframe">
+    <a href="computer_eng.html" target="iframe1">Computer Engineering</a>
+    <a href="info_technology.html" target="iframe1">Information Technology</a>
+    <a href="electronic_eng.html" target="iframe1">Electronics & Communication</a>
+    <a href="mechanical_eg.html" target="iframe1">Mechanical Engineering</a>
+    <a href="civil_eng.html" target="iframe1">Civil Engineering</a>
+  </div>
+
+    <div class="rightframe">
+      <iframe name="iframe1" src="adit_welcome.html"></iframe>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MBIT - CVMU</title>
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+    }
+
+    /* Top Frame */
+    header {
+        display: flex;
+        align-items: center;
+        background-color: rgb(190, 225, 226);
+        color: #ffffff;
+        padding: 10px;
+        border-bottom: 2px solid #c0c0c0;
+        text-align: center;
+        
+    }
+    header img {
+        height: 150px;
+            width: 250px;
+            background-size: contain;
+            background-repeat: no-repeat;
+    }
+    .title {
+        font-size: 24px;
+        font-weight: bold;
+        justify-content: center;
+    }
+
+    nav {
+        background-color: #333;
+        padding: 10px;
+        text-align: center;
+        border-bottom: 2px solid #c0c0c0;
+    }
+    nav a {
+        margin: 0 15px;
+        color: #ffffff;
+        text-decoration: none;
+        font-weight: bold;
+        cursor: pointer;
+    }
+    nav a:hover {
+        text-decoration: underline;
+    }
+
+    /* Layout */
+    .container {
+        display: flex;
+        height: 600px;
+    }
+
+    .leftframe {
+        width: 220px;
+        background-color: cadetblue;
+        border-right: 2px solid #c0c0c0;
+        padding: 10px;
+    }
+    .leftframe a {
+        display: block;
+        margin: 12px 0;
+        color: #002855;
+        text-decoration: none;
+        font-weight: bold;
+        cursor: pointer;
+    }
+    .leftframe a:hover {
+        text-decoration: underline;
+    }
+
+    .rightframe {
+        flex-grow: 1;
+        background-color: #ffffff;
+        padding: 15px;
+        overflow-y: auto;
+    }
+</style>
+    <script>
+function loadContent(dept) {
+    const rightFrame = document.getElementById("rightframe");
+    let content = "";
+
+    switch(dept) {
+        case "home":
+            content = `
+                <h2>Welcome to MBIT</h2>
+                <p>Madhuben & Bhanubhai Patel Institute of Technology (MBIT) offers engineering programs 
+                that prepare students for careers in industry, research, and innovation.</p>
+            `;
+            break;
+        case "comp":
+            content = `
+                <h2>Computer Engineering</h2>
+                <p>The Department of Computer Engineering provides quality education in programming, 
+                software engineering, AI, and modern computing technologies.</p>
+            `;
+            break;
+        case "it":
+            content = `
+                <h2>Information Technology</h2>
+                <p>The IT Department equips students with skills in databases, web technologies, 
+                cloud computing, and cybersecurity.</p>
+            `;
+            break;
+        case "ec":
+            content = `
+                <h2>Electronics & Communication</h2>
+                <p>This department focuses on communication systems, VLSI, signal processing, 
+                and embedded technologies.</p>
+            `;
+            break;
+        case "mech":
+            content = `
+                <h2>Mechanical Engineering</h2>
+                <p>The Mechanical Department covers design, thermal sciences, manufacturing, 
+                robotics, and automation.</p>
+            `;
+            break;
+        case "civil":
+            content = `
+                <h2>Civil Engineering</h2>
+                <p>Civil Engineering emphasizes structural engineering, construction technology, 
+                environmental engineering, and infrastructure development.</p>
+            `;
+            break;
+        default:
+            content = `<p>Select a department from the menu.</p>`;
+    }
+
+    rightFrame.innerHTML = content;
+}
+</script>
+</head>
+
+<body onload="loadContent('home')">
+
+<header>
+    <img src="mbit.png" alt="MBIT Logo">
+    <div class="title">Madhuben & Bhanubhai Patel Institute of Technology (MBIT)</div>
+</header>
+
+<nav>
+    <a onclick="loadContent('home')">Home</a>
+    <a onclick="loadContent('istar')">ISTAR</a>
+    <a onclick="loadContent('semcom')">SEMCOM</a>
+    <a onclick="loadContent('adit')">ADIT</a>
+    <a onclick="loadContent('mbit')">MBIT</a>
+</nav>
+
+<div class="container">
+    <!-- Left frame -->
+    <div class="leftframe">
+        <a onclick="loadContent('comp')">Computer Engineering</a>
+        <a onclick="loadContent('it')">Information Technology</a>
+        <a onclick="loadContent('ec')">Electronics & Communication</a>
+        <a onclick="loadContent('mech')">Mechanical Engineering</a>
+        <a onclick="loadContent('civil')">Civil Engineering</a>
+    </div>
+
+    <!-- Right frame -->
+    <div class="rightframe" id="rightframe">
+        <!-- Dynamic content loads here -->
+    </div>
+</div>
+
+</body>
+</html>
+
+    <!-- <title>University site</title>
+</head>
+<body>
+    <header ><div class="logo"></div>
+        <div class="uni"> Madhuben & Bhanubhai Patel Institute of Technology (MBIT)</div></header>
+        
+    <div class="navbar">
+  <a href="istar.html" class="nav-item">ISTAR</a>
+  <a href="semcom.html" class="nav-item">SEMCOM</a>
+  <a href="adit.html" class="nav-item">ADIT</a>
+  <a href="mbit.html" class="nav-item">MBIT</a>
+  
+</div>
+
+    <div class="leftframe">
+        <ul>
+            <li><a href="cs.html" target="iframe1">Computer Science Department</a></li>
+            <li><a href="oc.html" target="iframe1">Organic Chemistry</a></li>
+            <li><a href="ic.html" target="iframe1">Industrial chemistry</a></li>
+            <li><a href="mihs.html" target="iframe1">MIHS</a></li>
+        </ul>
+    </div>
+    <div class="rightframe"><iframe name="iframe1" height="400px" width="850px"></iframe>
+    
+    </div>
+</body>
+</html> -->
